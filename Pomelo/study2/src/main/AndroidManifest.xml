@@ -16,6 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <activity
+            android:launchMode="singleTask"
+            android:allowTaskReparenting="true"
+            android:name=".EntertainmentActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

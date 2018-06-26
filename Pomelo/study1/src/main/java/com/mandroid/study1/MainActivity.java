@@ -23,6 +23,9 @@ public class MainActivity extends Activity {
 
             @Override
             public void onClick(View v) {
+                Intent goStudy2 = new Intent();
+
+
 //                Intent intent = new Intent("com.ryg.charpter_1.c");
 //                //intent.setClass(MainActivity.this, SecondActivity.class);
 //                intent.putExtra("time", System.currentTimeMillis());
