@@ -1,6 +1,7 @@
 package com.mandroid.study1;
 
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
@@ -25,7 +26,13 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent goStudy2 = new Intent();
-                goStudy2.setAction("com.mandroid.study2.enter");
+                //action
+//                goStudy2.setAction("com.mandroid.study2.enter");
+
+                //componentName
+                ComponentName componentName = new ComponentName("com.mandroid.study2",
+                        "com.mandroid.study2.EntertainmentActivity");
+                goStudy2.setComponent(componentName);
 
                 if (goStudy2.resolveActivity(getPackageManager()) != null) {
                     startActivity(goStudy2);
