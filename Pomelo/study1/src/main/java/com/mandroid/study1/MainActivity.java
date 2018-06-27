@@ -2,6 +2,7 @@ package com.mandroid.study1;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,7 +25,11 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent goStudy2 = new Intent();
+                goStudy2.setAction("com.mandroid.study2.enter");
 
+                if (goStudy2.resolveActivity(getPackageManager()) != null) {
+                    startActivity(goStudy2);
+                }
 
 //                Intent intent = new Intent("com.ryg.charpter_1.c");
 //                //intent.setClass(MainActivity.this, SecondActivity.class);

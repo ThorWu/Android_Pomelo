@@ -9,16 +9,16 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="open activity B" />
+        android:text="open EntertainmentActivity of App name of study2 " />
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:text="A"
-        android:ems="10" >
+    <!--<EditText-->
+        <!--android:id="@+id/editText1"-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="A"-->
+        <!--android:ems="10" >-->
 
-        <requestFocus />
-    </EditText>
+        <!--<requestFocus />--><!--原来可以这样获取焦点！！！-->
+    <!--</EditText>-->
 
 </LinearLayout>

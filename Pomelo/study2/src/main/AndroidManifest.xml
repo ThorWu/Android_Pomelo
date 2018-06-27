@@ -19,10 +19,16 @@
 
 
         <activity
-            android:launchMode="singleTask"
-            android:allowTaskReparenting="true"
             android:name=".EntertainmentActivity"
-            android:screenOrientation="portrait" />
+            android:allowTaskReparenting="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.mandroid.study2.enter"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
