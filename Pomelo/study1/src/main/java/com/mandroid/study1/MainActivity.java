@@ -9,7 +9,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-public class MainActivity extends Activity {
+import com.mandroid.study1.modules.glide.GlideActivity;
+
+public class MainActivity extends Activity implements View.OnClickListener {
 
     private static final String TAG = "MainActivity";
 
@@ -46,6 +48,8 @@ public class MainActivity extends Activity {
 //                startActivity(intent);
             }
         });
+
+        initViews();
     }
 
     @Override
@@ -103,6 +107,28 @@ public class MainActivity extends Activity {
     protected void onDestroy() {
         Log.d(TAG, "onDestroy");
         super.onDestroy();
+    }
+
+    @Override
+    public void onClick(View view) {
+        int id = view.getId();
+        switch (id) {
+            case R.id.button_glide:
+                goActivity(GlideActivity.class);
+                break;
+            default:
+                break;
+        }
+    }
+
+
+    private void initViews() {
+        findViewById(R.id.button_glide).setOnClickListener(this);
+    }
+
+    private void goActivity(Class cls) {
+        Intent intent = new Intent(this, cls);
+        startActivity(intent);
     }
 }
 

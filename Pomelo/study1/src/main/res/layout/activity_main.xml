@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <Button
         android:id="@+id/button1"
@@ -12,13 +12,18 @@
         android:text="open EntertainmentActivity of App name of study2 " />
 
     <!--<EditText-->
-        <!--android:id="@+id/editText1"-->
-        <!--android:layout_width="150dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="A"-->
-        <!--android:ems="10" >-->
+    <!--android:id="@+id/editText1"-->
+    <!--android:layout_width="150dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="A"-->
+    <!--android:ems="10" >-->
 
-        <!--<requestFocus />--><!--原来可以这样获取焦点！！！-->
+    <!--<requestFocus />--><!--原来可以这样获取焦点！！！-->
     <!--</EditText>-->
 
+    <Button
+        android:id="@+id/button_glide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Glide" />
 </LinearLayout>

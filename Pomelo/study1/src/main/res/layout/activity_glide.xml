@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Glide图片使用" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="单个图片" />
+
+    <ImageView
+        android:id="@+id/iv_glide"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/colorAccent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_single_empty_string"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="空String" />
+
+        <Button
+            android:id="@+id/btn_single_string_null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="String null" />
+
+        <Button
+            android:id="@+id/btn_single_null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="空null" />
+
+        <Button
+            android:id="@+id/btn_single_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="url" />
+
+        <Button
+            android:id="@+id/btn_single_url2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="url2" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_glide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+</LinearLayout>
