@@ -1,7 +1,8 @@
-package com.mandroid.study1.util;
+package com.mandroid.study1.util.glide;
+
 import com.bumptech.glide.annotation.GlideModule;
 import com.bumptech.glide.module.AppGlideModule;
 
 @GlideModule
-public class MyAppGlideModule extends AppGlideModule{
+public final class MyAppGlideModule extends AppGlideModule {
 }

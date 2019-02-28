@@ -6,8 +6,8 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.mandroid.imagelib.imgglide.ImageGlide;
 import com.mandroid.study1.R;
+import com.mandroid.study1.util.glide.ImageGlide;
 
 public class GlideActivity extends Activity implements View.OnClickListener {
 

@@ -1,10 +1,8 @@
-package com.mandroid.study1.util;
+package com.mandroid.study1.util.glide;
 
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.ImageView;
-
-import com.bumptech.glide.Glide;
 
 
 public class ImageGlide {
@@ -14,6 +12,6 @@ public class ImageGlide {
             return;
         }
 
-        Glide.with(imageView.getContext()).load(url).into(imageView);
+        GlideApp.with(imageView.getContext()).load(url).into(imageView);
     }
 }
