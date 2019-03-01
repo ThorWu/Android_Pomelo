@@ -57,8 +57,12 @@
             android:text="url2" />
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ListView中使用" />
+
     <ListView
         android:id="@+id/lv_glide"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></ListView>
+        style="@style/ListView"></ListView>
 </LinearLayout>
