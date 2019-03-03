@@ -2,6 +2,7 @@ package com.mandroid.study1.modules.gallery;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
@@ -19,6 +20,7 @@ public class GalleryActivity extends Activity implements View.OnClickListener {
         findViewById(R.id.btn_open_gallery).setOnClickListener(this);
         findViewById(R.id.btn_select_image).setOnClickListener(this);
         findViewById(R.id.btn_select_image_2).setOnClickListener(this);
+        findViewById(R.id.btn_view_images).setOnClickListener(this);
     }
 
     @Override
@@ -31,7 +33,10 @@ public class GalleryActivity extends Activity implements View.OnClickListener {
                 selectImage();
                 break;
             case R.id.btn_select_image_2:
-                selectImages();
+                selectImage2();
+                break;
+            case R.id.btn_view_images:
+                viewImages();
                 break;
             default:
                 break;
@@ -58,7 +63,7 @@ public class GalleryActivity extends Activity implements View.OnClickListener {
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), 2);
     }
 
-    private void selectImages() {
+    private void selectImage2() {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.setType("image/*");
@@ -67,6 +72,11 @@ public class GalleryActivity extends Activity implements View.OnClickListener {
         } else {
             Log.d("gallery", "No Activity found to handle Intent");
         }
+    }
+
+    private void viewImages(){
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("content://media/internal/images/media"));
+        startActivity(intent);
     }
 
     @Override

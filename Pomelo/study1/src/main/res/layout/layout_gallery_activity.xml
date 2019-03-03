@@ -22,4 +22,10 @@
         android:layout_height="wrap_content"
         android:text="选择照片2" />
 
+    <Button
+        android:id="@+id/btn_view_images"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查看照片" />
+
 </LinearLayout>
