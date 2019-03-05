@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.mandroid.study1.modules.drag.DragAndDropActivity;
 import com.mandroid.study1.modules.gallery.GalleryActivity;
 import com.mandroid.study1.modules.glide.GlideActivity;
 
@@ -119,6 +120,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.button_gallery:
                 goActivity(GalleryActivity.class);
                 break;
+            case R.id.button_drag:
+                goActivity(DragAndDropActivity.class);
+                break;
             default:
                 break;
         }
@@ -128,6 +132,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private void initViews() {
         findViewById(R.id.button_glide).setOnClickListener(this);
         findViewById(R.id.button_gallery).setOnClickListener(this);
+        findViewById(R.id.button_drag).setOnClickListener(this);
     }
 
     private void goActivity(Class cls) {

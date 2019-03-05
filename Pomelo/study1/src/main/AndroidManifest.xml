@@ -28,6 +28,9 @@
         <activity
             android:name=".modules.gallery.GalleryActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.drag.DragAndDropActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
