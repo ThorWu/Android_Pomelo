@@ -1,1 +1,1 @@
-include ':app', ':base', ':instantapp', ':wear', ':tv', ':things', ':study2', ':study1', ':imagelib'
+include ':app', ':study2', ':study1', ':imagelib'
