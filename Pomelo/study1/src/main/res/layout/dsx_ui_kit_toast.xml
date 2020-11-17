@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:minWidth="110dp"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp"
+            android:gravity="center">
+        <com.mandroid.study1.util.icon.IconView
+                android:id="@+id/dsx_ui_kit_toast_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:textColor="#ffffff"
+                android:textSize="18dp"/>
+        <TextView
+                android:id="@+id/dsx_ui_kit_toast_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="#ffffff"
+                android:textSize="15dp"/>
+    </LinearLayout>
+</RelativeLayout>
+

@@ -11,6 +11,8 @@ import android.view.View;
 import com.mandroid.study1.modules.drag.DragAndDropActivity;
 import com.mandroid.study1.modules.gallery.GalleryActivity;
 import com.mandroid.study1.modules.glide.GlideActivity;
+import com.mandroid.study1.util.toast.DsxUiToast;
+import com.mandroid.study1.util.toast.DsxUiToastHelper;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
@@ -123,6 +125,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.button_drag:
                 goActivity(DragAndDropActivity.class);
                 break;
+            case R.id.button_toast:
+                DsxUiToastHelper.getInstance().showLongPositiveToast(this, "测试自定义Toast", DsxUiToast.TOP_50);
+                break;
             default:
                 break;
         }
@@ -133,6 +138,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         findViewById(R.id.button_glide).setOnClickListener(this);
         findViewById(R.id.button_gallery).setOnClickListener(this);
         findViewById(R.id.button_drag).setOnClickListener(this);
+        findViewById(R.id.button_toast).setOnClickListener(this);
     }
 
     private void goActivity(Class cls) {
