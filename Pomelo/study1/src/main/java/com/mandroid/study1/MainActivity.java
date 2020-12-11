@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.mandroid.study1.beans.Child;
+import com.mandroid.study1.beans.Father;
 import com.mandroid.study1.modules.drag.DragAndDropActivity;
 import com.mandroid.study1.modules.gallery.GalleryActivity;
 import com.mandroid.study1.modules.glide.GlideActivity;
@@ -128,6 +130,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.button_toast:
                 DsxUiToastHelper.getInstance().showLongPositiveToast(this, "测试自定义Toast", DsxUiToast.TOP_50);
                 break;
+            case R.id.btn_clone:
+                handleCloneClick();
+                break;
             default:
                 break;
         }
@@ -139,11 +144,34 @@ public class MainActivity extends Activity implements View.OnClickListener {
         findViewById(R.id.button_gallery).setOnClickListener(this);
         findViewById(R.id.button_drag).setOnClickListener(this);
         findViewById(R.id.button_toast).setOnClickListener(this);
+        findViewById(R.id.btn_clone).setOnClickListener(this);
     }
 
     private void goActivity(Class cls) {
         Intent intent = new Intent(this, cls);
         startActivity(intent);
+    }
+
+    private void handleCloneClick() {
+        Father father = new Father();
+        father.age = 26;
+        father.name = "张三";
+        father.child = new Child();
+        father.child.name = "小张三";
+        father.child.age = 2;
+
+        Father fatherClone = (Father) father.clone();
+
+        Log.d("clone", "father hashCode:" + father.hashCode());
+        Log.d("clone", "fatherClone hashCode:" + fatherClone.hashCode());
+        Log.d("clone", "fatherClone == father:" + (fatherClone == father));
+        Log.d("clone", "fatherClone.name == father.name:" + (fatherClone.name == father.name));
+        Log.d("clone", "fatherClone.age == father.age:" + (fatherClone.age == father.age));
+
+        Log.d("clone", "father.child hashCode:" + father.child.hashCode());
+        Log.d("clone", "fatherClone.child hashCode:" + fatherClone.child.hashCode());
+        Log.d("clone", "fatherClone.child == father.child:" + (fatherClone.child == father.child));
+
     }
 }
 
