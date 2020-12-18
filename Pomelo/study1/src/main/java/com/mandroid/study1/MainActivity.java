@@ -13,6 +13,7 @@ import com.mandroid.study1.beans.Father;
 import com.mandroid.study1.modules.drag.DragAndDropActivity;
 import com.mandroid.study1.modules.gallery.GalleryActivity;
 import com.mandroid.study1.modules.glide.GlideActivity;
+import com.mandroid.study1.modules.viewmodelsample.ViewModelSampleActivity;
 import com.mandroid.study1.util.toast.DsxUiToast;
 import com.mandroid.study1.util.toast.DsxUiToastHelper;
 
@@ -133,6 +134,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.btn_clone:
                 handleCloneClick();
                 break;
+            case R.id.btn_view_model:
+                goActivity(ViewModelSampleActivity.class);
+                break;
             default:
                 break;
         }
@@ -145,6 +149,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         findViewById(R.id.button_drag).setOnClickListener(this);
         findViewById(R.id.button_toast).setOnClickListener(this);
         findViewById(R.id.btn_clone).setOnClickListener(this);
+        findViewById(R.id.btn_view_model).setOnClickListener(this);
     }
 
     private void goActivity(Class cls) {
