@@ -137,6 +137,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.btn_view_model:
                 goActivity(ViewModelSampleActivity.class);
                 break;
+            case R.id.btn_start_activity:
+                Intent intent = new Intent(this, GlideActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                getApplicationContext().startActivity(intent);
+                break;
             default:
                 break;
         }
@@ -150,6 +155,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         findViewById(R.id.button_toast).setOnClickListener(this);
         findViewById(R.id.btn_clone).setOnClickListener(this);
         findViewById(R.id.btn_view_model).setOnClickListener(this);
+        findViewById(R.id.btn_start_activity).setOnClickListener(this);
     }
 
     private void goActivity(Class cls) {
